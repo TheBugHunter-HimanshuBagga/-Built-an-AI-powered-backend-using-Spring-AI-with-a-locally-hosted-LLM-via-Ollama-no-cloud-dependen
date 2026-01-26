@@ -14,4 +14,18 @@ public class AIServiceTests {
         var joke = aiService.getJoke("Dogs");
         System.out.println(joke);
     }
+
+    @Test
+    public void testEmbedTest(){
+        var embed = aiService.getEmbedding("This is a big text here"); // [0.3 , -0.52 , ..........]
+
+        for(float e : embed){
+            System.out.println(e + " ");
+        }
+    }
+
+    @Test
+    public void testStoreData(){
+        aiService.ingestDataToVectorStore("This is a text");
+    }
 }

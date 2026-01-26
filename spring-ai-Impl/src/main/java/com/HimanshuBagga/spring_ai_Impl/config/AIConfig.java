@@ -12,5 +12,7 @@ public class AIConfig {
         return builder
                 .build();
     }
+    // Thic chat client knows how to talk to ollama
+    // just a normal client(Interface) that connects your spring app to an ai model or talks with that model
     // This Create One AI client object for my whole application so that i can use it anywhere to talk to the AI model
 }
