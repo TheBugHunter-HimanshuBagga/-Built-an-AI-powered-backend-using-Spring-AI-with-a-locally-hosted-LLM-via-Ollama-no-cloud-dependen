@@ -10,6 +10,13 @@ public class AIServiceTests {
     private AIService aiService;
 
     @Test
+    public void testaskAI(){
+        var response = aiService.getJoke("What is Apple");
+        System.out.println(response);
+    }
+
+
+    @Test
     public void testGetJoke(){
         var joke = aiService.getJoke("Dogs");
         System.out.println(joke);
