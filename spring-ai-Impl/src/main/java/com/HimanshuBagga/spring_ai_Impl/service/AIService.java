@@ -17,6 +17,7 @@ import java.util.Map;
 public class AIService {
 
     private final ChatClient chatClient; //Used to talk to the AI model
+
     private final EmbeddingModel embeddingModel; // open-ai , converts text into vector -> used for semantic search
     private final VectorStore vectorStore; // VectorStore stores those vector (for RAG / similarity search later)
     // embedding
@@ -24,7 +25,7 @@ public class AIService {
         return embeddingModel.embed(text);
     } // Takes normal text -> Sends it to embedding model -> returns a vector
       // used for semantic search(meaning based search) -> similarity matching(converts text to vectors , converts user questions to vectors , compare vectors , pick most similar once) -> RAG
-
+      // raw data -> [0.2,0.32,0,64]
 
     public String askAI(String prompt){
         return chatClient.prompt()// starts building a request
