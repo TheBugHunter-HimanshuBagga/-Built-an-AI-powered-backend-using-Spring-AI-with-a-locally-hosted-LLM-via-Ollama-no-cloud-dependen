@@ -11,7 +11,7 @@ public class AIServiceTests {
 
     @Test
     public void testaskAI(){
-        var response = aiService.getJoke("What is Apple");
+        var response = aiService.askAI("What is Apple"); // I don't know (not passed with the data sent by me)
         System.out.println(response);
     }
 
@@ -33,6 +33,6 @@ public class AIServiceTests {
 
     @Test
     public void testStoreData(){
-        aiService.ingestDataToVectorStore("This is a text");
+        aiService.ingestDataToVectorStore();
     }
 }
